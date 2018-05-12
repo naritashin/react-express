@@ -1,7 +1,12 @@
 {
+  "presets": [
+    "react",
+    "env"
+  ],
   "plugins": [
     [
-      "module-alias", [
+      "module-alias",
+      [
         {
           "src": "./src/components",
           "expose": "components"

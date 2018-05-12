@@ -1,4 +1,2 @@
-require('babel-register')({
-  extensions: ['.js', '.jsx']
-});
+require('babel-register')();
 require('./server');
