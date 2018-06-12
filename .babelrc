@@ -1,15 +1,16 @@
 {
-  "presets": [
-    "react",
-    "env"
-  ],
+  "presets": ["react", "env"],
   "plugins": [
     [
       "module-alias",
       [
         {
-          "src": "./src/components",
+          "src": "./src/client/components",
           "expose": "components"
+        },
+        {
+          "src": "./",
+          "expose": "~"
         }
       ]
     ]

@@ -1,17 +1,21 @@
-import express from 'express';
+import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-const router = express.Router();
+import TopPage from 'components/pages/TopPage';
+import About from 'components/pages/About';
+import Link from 'components/pages/Link';
 
-router.get('/', (req, res, next) => {
-  res.render('../components/pages/TopPage');
-});
-
-router.get('/about', (req, res, next) => {
-  res.render('../components/pages/About');
-});
-
-router.get('/Link', (req, res, next) => {
-  res.render('../components/pages/Link');
-});
-
-module.exports = router;
+// import '../assets/css/reset.css';
+export default class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <Route exact path="/" component={TopPage} />
+          <Route path="/about" component={About} />
+          <Route path="/link" component={Link} />
+        </div>
+      </BrowserRouter>
+    );
+  }
+}
