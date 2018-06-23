@@ -1,12 +1,7 @@
 import React from 'react';
 import { reset } from 'styled-reset';
 import Header from 'components/organisms/Header';
-import styled, { injectGlobal } from 'styled-components';
-
-const baseStyled = () => injectGlobal`
-  ${reset}
-  * { box-sizing: border-box; }
-`;
+import { injectGlobal } from 'styled-components';
 
 const App = props => {
   baseStyled();
@@ -18,5 +13,10 @@ const App = props => {
     </div>
   );
 };
+
+const baseStyled = () => injectGlobal`
+  ${reset}
+  * { box-sizing: border-box; }
+`;
 
 module.exports = App;

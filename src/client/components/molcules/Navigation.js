@@ -20,7 +20,9 @@ const Navigation = props => {
   );
 };
 
-const Wrap = styled.nav`
+const Wrap = styled.footer`
+  position: fixed;
+  bottom: 0;
   width: 100%;
   height: 34px;
 `;
